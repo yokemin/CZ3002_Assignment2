@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+
+    <package name="myPackage" extends="struts-default">
+
+        <default-action-ref name="login" />
+
+        <action name="index" >
+            <result>/WEB-INF/jsp/index.jsp</result>
+        </action>
+        
+        <action name="login">
+        	<result>/WEB-INF/jsp/login.jsp</result>
+        </action>
+        
+        <action name="loginprocess" class="cz3002.assignment2.group57.Login">  
+			<result name="success"  >/WEB-INF/jsp/welcome.jsp</result>  
+			<result name="error" >/WEB-INF/jsp/loginerror.jsp</result>  
+		</action> 
+		
+		<action name="logout" class="cz3002.assignment2.group57.Login" method="logout">  
+			<result name="success" >/WEB-INF/jsp/logoutsuccess.jsp</result>  
+		</action>
+		
+		<action name="profile" class="cz3002.assignment2.group57.Profile"> 
+			<result name="success" >/WEB-INF/jsp/profilesuccess.jsp</result>  
+			<result name="error" >/WEB-INF/jsp/profileerror.jsp</result>  
+		</action>
+
+    </package>
+
+</struts>
