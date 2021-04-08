@@ -1,4 +1,4 @@
-<jsp:include page="profilesuccess.jsp"></jsp:include>  
+<jsp:include page="welcome.jsp"></jsp:include>  
 <hr/>  
 <%@ taglib uri="/struts-tags" prefix="s" %>  
   
