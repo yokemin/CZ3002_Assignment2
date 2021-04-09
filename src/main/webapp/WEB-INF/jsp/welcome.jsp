@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>login Successful</title>
+<title>Login Successful!</title>
 </head>
 <body bgColor="lightBlue">
 <h1>Welcome <s:property value="username"/>!</h1>

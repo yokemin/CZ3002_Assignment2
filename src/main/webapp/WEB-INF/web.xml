@@ -7,6 +7,11 @@
 	
 	<display-name>Struts 2 - Maven Archetype - Starter</display-name>
 	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:applicationContext*.xml</param-value>
+	</context-param>
+	
 	<!-- Filters -->
 	<filter>
         <filter-name>struts2-prepare</filter-name>
@@ -41,11 +46,21 @@
         </init-param>
     </servlet>
     
+    <servlet>
+    	<servlet-name>jspSupportServlet</servlet-name>
+    	<servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
+    	<load-on-startup>5</load-on-startup>
+    </servlet>
+    
     <servlet-mapping>
         <servlet-name>dwr</servlet-name>
         <url-pattern>/dwr/*</url-pattern>
     </servlet-mapping>
-    
+
+    <servlet-mapping>
+        <servlet-name>jspSupportServlet</servlet-name>
+        <url-pattern>/jspSupportServlet/*</url-pattern>
+    </servlet-mapping>
     
     <!-- Welcome file lists -->
     <welcome-file-list>
