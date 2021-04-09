@@ -6,8 +6,9 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
   
-public class Login extends ActionSupport implements SessionAware {  
-	private Account account;
+public class Login extends ActionSupport implements SessionAware {
+
+	private Account account = new Account();
 	SessionMap<String, String> sessionmap;
 	
 	public String usernameRequired = "Username is required.";
@@ -17,19 +18,15 @@ public class Login extends ActionSupport implements SessionAware {
 	    return account.getUsername();  
 	}
 
-	public Account getAccount() {
-		return account;
+	public String getPassword() {
+		return account.getPassword();
 	}
-
+	
 	public void setAccount(String username, String password) {  
 	    this.account.setUsername(username);  
 		this.account.setPassword(password);  
-	}  
+	}
 
-	public String getPassword() {  
-	    return account.getPassword();  
-	}  
-	  
 	public String execute() {  
 		if (getUsername().length() == 0) {
             addFieldError("username", usernameRequired);
