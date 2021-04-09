@@ -7,23 +7,27 @@ import com.opensymphony.xwork2.ActionSupport;
 
   
 public class Login extends ActionSupport implements SessionAware {  
-	private Account;
+	private Account account;
 	SessionMap<String, String> sessionmap;
 	
 	public String usernameRequired = "Username is required.";
     public String passwordRequired = "Password is required.";
   
 	public String getUsername() {  
-	    return Account.getUsername();  
-	}  
-	
+	    return account.getUsername();  
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
 	public void setAccount(String username, String password) {  
-	    this.Account.setUsername(username);  
-		this.Account.setPassword(password);  
+	    this.account.setUsername(username);  
+		this.account.setPassword(password);  
 	}  
 
 	public String getPassword() {  
-	    return Account.getPassword();  
+	    return account.getPassword();  
 	}  
 	  
 	public String execute() {  
@@ -35,10 +39,9 @@ public class Login extends ActionSupport implements SessionAware {
             addFieldError("password", getText(passwordRequired));
         }
 		
-		if (LoginDAO.validate(username, password)) {  
+		if (LoginDAO.validate(getUsername(), getPassword())) {  
 	        return "success";  
-	    }  
-	    else {  
+	    } else {  
 	        return "error";  
 	    }  
 	}  
