@@ -1,11 +1,11 @@
 package cz3002.assignment2.group57;
 
-import java.util.Map;  
-import org.apache.struts2.dispatcher.SessionMap;  
+import java.util.Map;
+import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
-  
+
 public class Login extends ActionSupport implements SessionAware {
 
 //	private Account account;
@@ -75,11 +75,11 @@ public class Login extends ActionSupport implements SessionAware {
 	public String getUsername() {
 		return account.getUsername();
 	}
-	
+
 	public void setPassword(String pass) {
 		this.pass = pass;
 	}
-	
+
 	public void setUsername(String user) {
 		this.user = user;
 	}
