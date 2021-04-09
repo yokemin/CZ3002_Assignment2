@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
   
 public class Login extends ActionSupport implements SessionAware {  
-	private Account; ß  
+	private Account;
 	SessionMap<String, String> sessionmap;
 	
 	public String usernameRequired = "Username is required.";
