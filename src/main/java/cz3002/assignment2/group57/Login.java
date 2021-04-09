@@ -4,29 +4,26 @@ import java.util.Map;
 import org.apache.struts2.dispatcher.SessionMap;  
 import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
+
   
 public class Login extends ActionSupport implements SessionAware {  
-	
-	private String username, password;  
+	private Account;
 	SessionMap<String, String> sessionmap;
 	
 	public String usernameRequired = "Username is required.";
     public String passwordRequired = "Password is required.";
   
 	public String getUsername() {  
-	    return username;  
+	    return Account.getUsername();  
 	}  
-	  
-	public void setUsername(String username) {  
-	    this.username = username;  
+	
+	public void setAccount(String username, String password) {  
+	    this.Account.setUsername(username);  
+		this.Account.setPassword(password);  
 	}  
-	  
+
 	public String getPassword() {  
-	    return password;  
-	}  
-	  
-	public void setPassword(String password) {  
-	    this.password = password;  
+	    return Account.getPassword();  
 	}  
 	  
 	public String execute() {  
