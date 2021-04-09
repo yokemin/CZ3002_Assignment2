@@ -12,7 +12,8 @@
 <s:head />
  </head>
 <body bgColor="lightBlue">
-<s:form action="loginprocess">
+<h1>Login Page</h1>
+<s:form action="loginprocess" >
  <s:textfield name="username" label="Username" />
  <s:password name="password" label="Password" />
  <s:submit value="Login" />

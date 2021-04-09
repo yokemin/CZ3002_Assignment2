@@ -7,6 +7,16 @@ public class Account {
 	
 	private String username, password;  
   
+	public Account(String username, String password){
+		this.username = username;  
+		this.password = password;  
+   }
+
+   public Account(){
+	   this.username = "default";  
+	   this.password = "default";  
+   }
+
 	public String getUsername() {  
 	    return username;  
 	}  
@@ -21,6 +31,6 @@ public class Account {
 	  
 	public void setPassword(String password) {  
 	    this.password = password;  
-	} 
-	  
+	}
+
 }  

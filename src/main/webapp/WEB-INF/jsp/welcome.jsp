@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>login Successful</title>
 </head>
-<body>
-Welcome <s:property value="username"/>!!!
+<body bgColor="lightBlue">
+<h1>Welcome <s:property value="username"/>!</h1>
 <s:form action="logout">
  <s:submit value="Logout" />
 </s:form>
