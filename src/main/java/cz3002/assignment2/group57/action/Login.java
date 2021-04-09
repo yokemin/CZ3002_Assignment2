@@ -1,6 +1,9 @@
-package cz3002.assignment2.group57;
+package cz3002.assignment2.group57.action;
 
 import java.util.Map;
+
+import cz3002.assignment2.group57.model.Account;
+import cz3002.assignment2.group57.LoginDAO;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;

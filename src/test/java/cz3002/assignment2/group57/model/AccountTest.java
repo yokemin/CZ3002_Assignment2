@@ -1,4 +1,4 @@
-package cz3002.assignment2.group57;
+package cz3002.assignment2.group57.model;
 
 public class AccountTest{
    public static void main(String[] args){

@@ -1,7 +1,4 @@
-package cz3002.assignment2.group57;
-
-import java.util.Map;  
-
+package cz3002.assignment2.group57.model;
   
 public class Account {  
 	

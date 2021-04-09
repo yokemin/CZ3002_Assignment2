@@ -1,4 +1,4 @@
-package cz3002.assignment2.group57;
+package cz3002.assignment2.group57.action;
 
 import static org.junit.Assert.*;
 

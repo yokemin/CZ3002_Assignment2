@@ -20,12 +20,12 @@
         	<result>/WEB-INF/jsp/login.jsp</result>
         </action>
         
-        <action name="loginprocess" class="cz3002.assignment2.group57.Login">  
+        <action name="loginprocess" class="cz3002.assignment2.group57.action.Login">  
 			<result name="success"  >/WEB-INF/jsp/welcome.jsp</result>  
 			<result name="error" >/WEB-INF/jsp/loginerror.jsp</result>  
 		</action> 
 		
-		<action name="logout" class="cz3002.assignment2.group57.Login" method="logout">  
+		<action name="logout" class="cz3002.assignment2.group57.action.Login" method="logout">  
 			<result name="success" >/WEB-INF/jsp/logoutsuccess.jsp</result>  
 		</action>
 

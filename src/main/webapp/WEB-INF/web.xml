@@ -31,7 +31,6 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     
-    
     <!-- Servlets -->
     <servlet>
         <servlet-name>dwr</servlet-name>
@@ -40,11 +39,6 @@
             <param-name>debug</param-name>
             <param-value>true</param-value>
         </init-param>
-    </servlet>
-    <servlet>
-    	<servlet-name>jspSupportServlet</servlet-name>
-    	<servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
-    	<load-on-startup>5</load-on-startup>
     </servlet>
     
     <servlet-mapping>
