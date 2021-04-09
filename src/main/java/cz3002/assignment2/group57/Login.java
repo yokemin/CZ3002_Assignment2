@@ -9,20 +9,27 @@ import com.opensymphony.xwork2.ActionSupport;
 public class Login extends ActionSupport implements SessionAware {
 
 	private Account account = new Account();
+	private String username, password;  
 	SessionMap<String, String> sessionmap;
 	
 	public String usernameRequired = "Username is required.";
     public String passwordRequired = "Password is required.";
   
-	public String getUsername() {  
+	public String getUsername() { 
+		if (account.getUsername() != username){
+			account.setUsername(username);
+		}
 	    return account.getUsername();  
 	}
 
 	public String getPassword() {
+		if (account.getPassword() != password){
+			account.setPassword(password);
+		}
 		return account.getPassword();
 	}
 	
-	public void setAccount(String username, String password) {  
+	public void setAccount(String username, String password) {     
 	    this.account.setUsername(username);  
 		this.account.setPassword(password);  
 	}
