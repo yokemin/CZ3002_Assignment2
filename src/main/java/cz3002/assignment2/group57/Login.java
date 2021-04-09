@@ -84,10 +84,6 @@ public class Login extends ActionSupport implements SessionAware {
 		this.user = user;
 	}
 
-	public String getPassword() {
-		return account.getPassword();
-	}
-
 	public String execute() {
 		setAccount();
 		if (account.getUsername().length() == 0) {
