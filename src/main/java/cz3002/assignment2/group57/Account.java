@@ -6,9 +6,6 @@ import java.util.Map;
 public class Account {  
 	
 	private String username, password;  
-	
-	public String usernameRequired = "Username is required.";
-    public String passwordRequired = "Password is required.";
   
 	public String getUsername() {  
 	    return username;  
