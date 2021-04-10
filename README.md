@@ -9,10 +9,10 @@ Group Members:
 
 ## Run program locally
 ### Pre-requisites:
-Struts2 Libraries
-Eclipse IDE for Java and Web Developers / IntelliJ IDEA
-MySql
-MySql Connector
+* Struts2 Libraries
+* Eclipse IDE for Java and Web Developers / IntelliJ IDEA
+* MySql
+* MySql Connector
 
 ### MySQL Database:
 Set up database using the following SQL Database Script:
