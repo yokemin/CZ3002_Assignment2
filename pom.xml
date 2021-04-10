@@ -8,8 +8,7 @@
 	<artifactId>group57</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>group57</name>
-	<description>Struts 2 Starter</description>
+	<name>CZ3002 Assignment 2 - Login Webapp</name>
 
 	<properties>
 		<struts2.version>2.5.22</struts2.version>
@@ -25,14 +24,6 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.23</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc11 -->
-		<dependency>
-			<groupId>com.oracle.database.jdbc</groupId>
-			<artifactId>ojdbc11</artifactId>
-			<version>21.1.0.0</version>
-		</dependency>
-
 
 		<dependency>
 			<groupId>org.apache.struts</groupId>
