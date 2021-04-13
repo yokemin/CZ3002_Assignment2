@@ -11,43 +11,36 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class Login extends ActionSupport implements SessionAware {
 
-	private String username, password;
+	private static final long serialVersionUID = 1L;
 	private Account account;
 	SessionMap<String, String> sessionmap;
-
-	public String usernameRequired = "Username is required.";
-	public String passwordRequired = "Password is required.";
-
-	public void setAccount() {
-		this.account = new Account(username, password);
+	
+	public Login() {
+		super();
 	}
-
-	public String getUsername() {
-		return username;
+	
+	public Account getAccount() {
+		return this.account;
 	}
-
-	public void setPassword(String pass) {
-		this.password = pass;
-	}
-
-	public void setUsername(String user) {
-		this.username = user;
+	
+	public void setAccount(Account account) {
+		this.account = account; 
 	}
 
 	public String execute() {
-		setAccount();
 		if (account.getUsername().length() == 0) {
-			addFieldError("username", usernameRequired);
+			addFieldError("account.username", "Username is required.");
 		}
 
 		if (account.getPassword().length() == 0) {
-			addFieldError("password", getText(passwordRequired));
+			addFieldError("account.password", "Password is required.");
 		}
-
+		
 		if (LoginDAO.validate(account.getUsername(), account.getPassword())) {
 			return "success";
 		}
 		else {
+			addActionError("Wrong Username or Password!");
 			return "error";
 		}
 	}

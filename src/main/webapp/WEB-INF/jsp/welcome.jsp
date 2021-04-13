@@ -1,16 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@taglib uri="/struts-tags" prefix="s"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login Successful!</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>Successful Login</title>
 </head>
+
+<style type="text/css">
+ html, body {
+  height: 100%;
+ }
+ html {
+  display: table;
+  margin: auto;
+ }
+ body {
+  display: table-cell;
+  vertical-align: middle;
+ }
+</style>
+
 <body bgColor="lightBlue">
-<h1>Welcome <s:property value="username"/>!</h1>
-<s:form action="logout">
- <s:submit value="Logout" />
-</s:form>
+ <div style="text-align: center">
+  <h1>Welcome <s:property value="account.username"/>!</h1>
+   <s:form action="logout">
+    <s:submit value="Logout" />
+   </s:form>
+  </div>
 </body>
 </html>

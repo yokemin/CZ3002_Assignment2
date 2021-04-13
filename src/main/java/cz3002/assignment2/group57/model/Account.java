@@ -5,13 +5,13 @@ public class Account {
 	private String username, password;  
   
 	public Account(String username, String password){
+		super();
 		this.username = username;  
 		this.password = password;  
    }
 
-   public Account(){
-	   this.username = "default";  
-	   this.password = "default";  
+   public Account() {
+	   super(); 
    }
 
 	public String getUsername() {  

@@ -1,23 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
- pageEncoding="ISO-8859-1"%>
- 
- <%@taglib uri="/struts-tags" prefix="s" %> 
- 
- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login Page</title>
- 
-<s:head />
+ <head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
  </head>
-<body bgColor="lightBlue">
-<h1>Login Page</h1>
-<s:form action="loginprocess" >
- <s:textfield name="username" label="Username" />
- <s:password name="password" label="Password" />
- <s:submit value="Login" />
-</s:form>
+
+ <style type="text/css">
+  .errorMessage {
+   font-weight: bold;
+   color: red;
+   list-style: none;
+   padding: 0;
+  }
+  html, body {
+   height: 100%;
+  }
+  html {
+   display: table;
+   margin: auto;
+  }
+  body {
+   display: table-cell;
+   vertical-align: middle;
+  }
+ </style>
  
+<body bgColor="lightBlue">
+ <div style="text-align: center">
+    <h1>Login Page</h1>
+   <s:form action="loginprocess" method="post" theme="css_xhtml">
+    <s:textfield name="account.username" label="Name" type="text" 
+                 value="" size = "30"/>
+    <s:textfield name="account.password" label="Password" type="password"
+                 value="" size = "30"/>
+    <s:submit value="Login"/>
+  </s:form>
+ </div>
 </body>
 </html>
