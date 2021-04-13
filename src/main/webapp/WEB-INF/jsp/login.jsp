@@ -10,7 +10,7 @@
  <style type="text/css">
   .errorMessage {
    font-weight: bold;
-   color: red;
+   color: darkred;
    list-style: none;
    padding: 0;
   }
@@ -28,10 +28,9 @@
  </style>
  
 <body bgColor="lightBlue">
- <div style="text-align: center">
     <h1>Login Page</h1>
    <s:form action="loginprocess" method="post" theme="css_xhtml">
-    <s:textfield name="account.username" label="Name" type="text" 
+    <s:textfield name="account.username" label="Username" type="text" 
                  value="" size = "30"/>
     <s:textfield name="account.password" label="Password" type="password"
                  value="" size = "30"/>
